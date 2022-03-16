@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: white;
+    /*그림자효과, x위치 y위치 blur color*/
+    box-shadow: 0 3px 10px #bbb;
+    position: relative;
+    z-index: 9000;
+}
+
+.cen {
+   width: 1000px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+   text-decoration: none;
+    color: #000;
+}
+
+h1 {
+    float: left;
+    margin-top: 15px;
+}
+
+.main {
+    list-style: none;
+}
+
+.main>a {
+    font-weight: bold;
+}
+
+#gnb {
+    float: right;
+    line-height: 80px;
+    font-size: 0.8rem;
+}
+
+#gnb a {
+    color: #666;
+}
+
+#gnb a::after {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 0.7rem;
+    background-color: #666;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+#gnb a:last-child::after {
+    display: none;
+}
+
+#gnb a:hover {
+    text-decoration: underline;
+}
+
+#lnb {
+    margin-left: 16px;
+    float: left;
+    width: 300px;
+}
+
+.main {
+    float: left;
+    width: 100px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.2rem;
+}
+
+.main:hover>a {
+    color: magenta;
+}
+
+/*z-index는 position에만 주는것*/
+.sub {
+    overflow: auto;
+    position: absolute;
+    width: 100%; 
+    display: none;
+    left: 0;
+    background: #333;
+    text-align: center;
+    z-index: 500;
+    height: 50px;
+    line-height: 50px;
+}
+
+/*.sub li가 가로배치됨*/
+.main:hover .sub {
+    display: block;
+}
+
+.sub li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 1.2rem;
+}
+
+.sub a {
+    color: #efefef;
+    font-size: 1rem;
+}
+
+.sub a:hover {
+    color: magenta;
+}
+
+/*사진높이가 501이다. height:500px하면 크기 안나옴. 자식이 부모보다 커서 안담기는듯*/
+#mainVisual {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*absolute 가운데정렬 명심명심또명심*/
+.slide {
+    position: absolute;
+    height: 501px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#band {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
+}
+
+#bandCenter {
+    display: block;
+    width: 500px;
+    margin: auto;
+    font-size: 0.85rem;
+    bottom: 0;
+    vertical-align: 80px;
+    margin-top: 15px;
+}
+
+/*bandCenter a 두개를 합친 가로길이가 bandCenter 가로길이 이하여야 부모에 담겨 한줄됨*/
+#bandCenter a {
+    display: inline-block;
+    float: left;
+    width: 250px;
+    height: 50px;
+    background: #fff;
+    border-radius: 3px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+/*    box-shadow: 0 2px 5px #777;*/
+}
+
+#bandCenter a:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 1px solid #ccc;
+    box-shadow: 0 2px 5px #777;
+}
+
+#bandCenter a:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 2px 2px 5px #777;
+}
+
+#bandCenter span {
+    color: magenta;
+}
+
+#icons {
+/*    clear: both;*/
+    display: block;
+    margin-top: 20px;
+}
+
+#icons a {
+    display: inline;
+    float: left;
+    width: calc((100% - 40px) / 5);
+    text-align: center;
+    margin-right: 5px;
+}
+
+#icons a:last-child {
+    margin-right: 0;
+}
+
+.proitem p:last-of-type {
+    color: magenta;
+}
+
+.proTitle {
+    font-size: 1.65rem;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.proCont {
+    margin-bottom: 0.8rem;
+}
+
+.proLink {
+    margin-bottom: 0.8rem;
+}
+
+
+
+
+
+
+
+#board {
+    margin-bottom: 270px;
+}
+
+.boardBox {
+    padding-right: 10px;
+    margin-top: 50px;
+}
+
+.boardBox h2 {
+    margin-bottom: 15px;
+}
+
+.boardBox:first-child span {
+    display: inline-block;
+    float: right;
+}
+
+#plus_btn {
+    display: block;
+    vertical-align: center;
+    font-size: 1.2rem;
+}
+
+.boardBox a {
+    font-size: 0.85rem;
+    
+}
+
+.h2right {
+    float: right;
+}
+
+.boardBox {
+   display: inline-block;
+    float: left;
+    width: calc(100% /3);
+}
+
+.boardBox li {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    background-color: #eee;
+/*    border-top: 1px solid #fff;*/
+}
+
+footer .cen {
+    padding-top: 50px;
+}
+
+#footerLeft {
+    float: left;
+    color: #666;
+}
+
+#footerLeft>div a::after {
+    display: inline-block;
+    content: "";
+    width: 1.5px;
+    height: 0.8rem;
+    background-color: #666;
+    margin-left: 5px;
+}
+
+#footerLeft>div a:last-child::after {
+    display: none;
+}
+
+#footerLeft p:nth-child(2) {
+    margin-top: 0;
+}
+
+#footerRight {
+    float: right;
+}
